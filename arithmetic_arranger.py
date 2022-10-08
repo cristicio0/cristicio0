@@ -49,7 +49,6 @@ def arithmetic_arranger ( problems, val= False ):
         arranged_problems= line1.rstrip() + "\n" + line2.rstrip() + "\n" + line3.rstrip() + "\n " + line4.rstrip()
     else:
         arranged_problems = line1.rstrip() + "\n" + line2.rstrip() + "\n" + line3.rstrip()
-
     return arranged_problems
 
 
