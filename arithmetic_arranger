@@ -32,15 +32,10 @@ def arithmetic_arranger ( problems, val= False ):
     for i in range(len(first_operand)):
         if len(first_operand[i]) > len(second_operand[i]):
             line1= line1 + " " * 2 + first_operand[i]+ " "*4
-        else:
-            line1= line1 + " " * (len(second_operand[i]) - len(first_operand[i])+2) + first_operand[i]+ " "*4
-
-
-        if len(first_operand[i]) > len(second_operand[i]):
             line2= line2 + sign[i] + " " * (len(first_operand[i]) - len(second_operand[i]) + 1) + second_operand[i] + " "*4
         else:
+            line1= line1 + " " * (len(second_operand[i]) - len(first_operand[i])+2) + first_operand[i]+ " "*4
             line2= line2 + sign[i] + " " + second_operand[i]+ " "*4
-
 
         line3= line3 + "-" * (max(len(first_operand[i]), len(second_operand[i])) + 2) + " "*4
         result=''
@@ -56,3 +51,6 @@ def arithmetic_arranger ( problems, val= False ):
         arranged_problems = line1.rstrip() + "\n" + line2.rstrip() + "\n" + line3.rstrip()
 
     return arranged_problems
+
+
+
